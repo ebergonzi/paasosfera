@@ -1,0 +1,7 @@
+{
+    "id": "task", 
+    "cmd": "while [ true ] ; do  date; sleep 5 ; done",
+    "cpus": 0.1,
+    "mem": 0.5,
+    "instances": 1
+}

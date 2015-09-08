@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rnd=`od --read-bytes=4 --address-radix=n --format=u4 /dev/random | awk '{print $1}'`
+cat task | sed -e "s/task/task$rnd/" | curl --noproxy '*' -XPOST -H "Content-type: application/json" http://10.30.65.117:8080/v2/apps -d @-
